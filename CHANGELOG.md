@@ -6,9 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.0.1] - Sat Nov 18 23:43:16 MST 2017
 ### Added
 - Generated full webpack config w/ vuetifyjs template
 - Separate Header/Footer components
 - Basic navbar with Home, Admin, Cart routes
 - Nested routes under admin page
+
+### Changed
+
+### Removed
