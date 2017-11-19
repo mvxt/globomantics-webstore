@@ -1,55 +1,34 @@
 <template>
   <v-app>
-    <v-toolbar dark color="grey--darken-3">
-      <v-toolbar-side-icon></v-toolbar-side-icon>
-      <v-toolbar-title class="white--text">
-        <router-link to="/">Awesomest Shop Ever</router-link>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>search</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>apps</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>refresh</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>more_vert</v-icon>
-      </v-btn>
-      <router-link to="/cart">
-        <v-btn icon>
-          <v-icon>shopping_cart</v-icon>
-        </v-btn>
-      </router-link>
-    </v-toolbar>
-    <div id="app">
-      <img src="./assets/logo.png" />
-
-      <!-- Route outlet -->
-      <router-view></router-view>
-    </div>
+    <app-header></app-header>
+    <!-- <app-header></app-header>-->
+    <main>
+      <v-content>
+        <v-flex xs8 offset-xs2>
+          <v-slide-x-transition mode="out-in">
+            <!-- Route outlet -->
+            <router-view></router-view>
+          </v-slide-x-transition>
+        </v-flex>
+      </v-content>
+    </main>
+    <app-footer></app-footer>
   </v-app>
 </template>
 
 <script>
+  import Header from './components/Header.vue'
+  import Footer from './components/Footer.vue'
   export default {
-    data () {
-      return {
-        clipped: false,
-        drawer: true,
-        fixed: false,
-        items: [{
-          icon: 'bubble_chart',
-          title: 'Inspire'
-        }],
-        miniVariant: false,
-        right: true,
-        rightDrawer: false,
-        title: 'Vuetify.js'
-      }
+    components: {
+      'app-header': Header,
+      'app-footer': Footer
     }
   }
-
 </script>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+</style>
