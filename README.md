@@ -1,5 +1,5 @@
-# vendo
-Vuejs shopping web app w/ Vuetify front end
+# Globomantics
+Basic Vuejs shopping web app w/ Vuetify front end
 
 ## Build Setup
 
