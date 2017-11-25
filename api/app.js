@@ -3,11 +3,30 @@ var path = require('path')
 var logger = require('morgan')
 var cookieParser = require('cookie-parser')
 var bodyParser = require('body-parser')
+const mongoose = require('mongoose')
 
 var index = require('./routes/index')
 var users = require('./routes/users')
+const api = require('./routes/product')
 
+// Setup an express app
 var app = express()
+
+// Connect to the Database
+mongoose.connect(`mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_URL}`)
+
+// CORS settings
+app.all('/*', function (req, res, next) {
+  // CORS headers
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+  res.header('Access-Control-Allow-Headers', 'Content-type,Accept,X-Access-Token,X-Key')
+  if (req.method === 'OPTIONS') {
+    res.status(200).end()
+  } else {
+    next()
+  }
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
@@ -20,6 +39,7 @@ app.use(cookieParser())
 
 app.use('/', index)
 app.use('/users', users)
+app.use('/api/v1', api)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
