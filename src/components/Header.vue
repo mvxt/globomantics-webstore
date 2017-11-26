@@ -5,20 +5,20 @@
         <v-toolbar-items>
           <router-link to="/home">
             <v-toolbar-title class="ml-0">
-              <v-icon dark class="mb-2">home</v-icon>
+              <v-icon dark class="mb-1">home</v-icon>
               <span class="ml-1 title">Home</span>
             </v-toolbar-title>
           </router-link>
           <router-link to="/admin">
             <v-toolbar-title class="ml-0 pl-2">
-              <v-icon dark class="mb-2">supervisor_account</v-icon>
+              <v-icon dark class="mb-1">supervisor_account</v-icon>
               <span class="ml-1 title">Admin</span>
             </v-toolbar-title>
           </router-link>
           <v-spacer></v-spacer>
           <router-link to="/cart">
             <v-toolbar-title class="mr-0">
-              <v-icon dark class="mb-2">shopping_cart</v-icon>
+              <v-icon dark class="mb-1">shopping_cart</v-icon>
               <span class="ml-1 title">Cart</span>
             </v-toolbar-title>
           </router-link>

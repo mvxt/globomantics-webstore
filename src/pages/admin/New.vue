@@ -11,7 +11,13 @@
     },
     data () {
       return {
-        product: {}
+        product: {
+          title: 'Blah',
+          price: 'Blah',
+          upc: 'Blah',
+          image: 'Blah',
+          description: 'Blah'
+        }
       }
     },
     methods: {
