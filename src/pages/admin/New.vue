@@ -1,10 +1,13 @@
 <template>
-  <product-form @save-product="addProduct" :model="product">
+  <product-form @save-product="addProduct" :product="product">
   </product-form>
 </template>
 
 <script>
-  import ProductForm from '@/components/ProductForm.vue'
+  import ProductForm from '@/components/product/ProductForm.vue'
+  import {
+    ADD_PRODUCT
+  } from '../../store/mutation-types'
   export default {
     components: {
       'product-form': ProductForm
@@ -12,7 +15,7 @@
     data () {
       return {
         product: {
-          title: 'Blah',
+          name: 'Blah',
           price: 'Blah',
           upc: 'Blah',
           image: 'Blah',
@@ -22,7 +25,7 @@
     },
     methods: {
       addProduct (product) {
-        console.log('product', product)
+        this.$store.commit(ADD_PRODUCT, product)
       }
     }
   }

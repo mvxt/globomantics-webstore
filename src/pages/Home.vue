@@ -1,19 +1,16 @@
 <!-- ./src/components/Home.vue -->
 <template>
-  <div>
-    <div class="title">
-      <h1>{{msg}}</h1>
-    </div>
-  </div>
+  <v-layout>
+    <product-list></product-list>
+  </v-layout>
 </template>
 
 <script>
+  import ProductList from '../components/product/ProductList.vue'
   export default {
     name: 'home',
-    data () {
-      return {
-        msg: 'Welcome to Your Vue.js App'
-      }
+    components: {
+      'product-list': ProductList
     }
   }
 </script>

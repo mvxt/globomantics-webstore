@@ -9,14 +9,14 @@
           </div>
         </v-card-title>
         <v-card-text>
-          <v-form v-model="product" @submit.prevent="saveProduct">
+          <v-form v-model="valid" @submit.prevent="saveProduct">
             <v-layout row wrap>
             <v-flex xs6 class="pr-4 pl-2">
               <v-layout column>
                 <v-text-field
-                  label="Product Title"
-                  v-model="product.title"
-                  :rules="titleRules"
+                  label="Product Name"
+                  v-model="product.name"
+                  :rules="nameRules"
                   required>
                 </v-text-field>
                 <v-text-field
@@ -56,7 +56,7 @@
         </v-card-text>
         <v-layout row class="text-xs-right">
           <v-flex xs12>
-            <v-btn class="success mb-2" @click="submit">
+            <v-btn class="success mb-2" @click="saveProduct">
               <span v-if="isEditing">Update Product</span>
               <span v-else>Add Product</span>
             </v-btn>
@@ -71,7 +71,8 @@
   export default {
     data () {
       return {
-        titleRules: [
+        valid: false,
+        nameRules: [
           (v) => !!v || 'Product title is required',
           (v) => v.length <= 32 || 'Product title must be no greater than 32 characters'
         ],
@@ -87,6 +88,9 @@
         imageRules: [
           (v) => !!v || 'Image is required',
           (v) => /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=+$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=+$,\w]+@)[A-Za-z0-9.-]+)((?:\/[+~%/.\w-_]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[\w]*))?)/.test(v) || 'Image must be a valid URL'
+        ],
+        descriptionRules: [
+          (v) => !!v || 'Description is required'
         ]
       }
     },
