@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { productActions } from './actions'
 import { productGetters } from './getters'
 import { productMutations, cartMutations } from './mutations'
 
@@ -20,6 +21,8 @@ export default new Vuex.Store({
   // Getters
   getters: Object.assign({}, productGetters),
   // Mutations
-  mutations: Object.assign({}, productMutations, cartMutations)
+  mutations: Object.assign({}, productMutations, cartMutations),
+  // Actions
+  actions: Object.assign({}, productActions)
 })
 

@@ -1,5 +1,5 @@
 import axios from 'axios'
-const API_BASE = 'ds053794.mlab.com:53794/globomantics/api/v1'
+const API_BASE = 'http://localhost:3000/api/v1'
 
 import {
   ADD_PRODUCT,
@@ -30,6 +30,7 @@ export const productActions = {
     })
   },
   addProduct ({commit}, payload) {
+    debugger
     commit(ADD_PRODUCT)
     // Create a new product via API
     axios.post(`${API_BASE}/products`, payload).then(response => {
@@ -50,12 +51,5 @@ export const productActions = {
       console.debug('response', response.data)
       commit(REMOVE_PRODUCT_SUCCESS, response.data)
     })
-  }
-}
-
-export const productMutations = {
-  addProduct (state, payload) {
-    state.showLoader = true
-    state.products.push(payload)
   }
 }
