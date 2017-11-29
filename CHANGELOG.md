@@ -11,7 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Separate Header/Footer components
 - Basic navbar with Home, Admin, Cart routes
 - Nested routes under admin page
+- API for accessing a mongodb via mongoose
+- Vuex store for state management, mutation types, getters, etc.
 
 ### Changed
 
 ### Removed
+- Template icons/PNG images
