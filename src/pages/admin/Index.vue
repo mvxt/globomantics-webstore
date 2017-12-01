@@ -21,26 +21,3 @@
     </v-slide-x-transition>
   </v-layout>
 </template>
-
-<script>
-  export default {
-    data () {
-      return {
-        items: [
-          {
-            id: 'product-list',
-            icon: 'blah',
-            title: 'Product List',
-            route: '/admin/products'
-          },
-          {
-            id: 'add-product',
-            icon: 'blah',
-            title: 'Add Product',
-            route: '/admin/new'
-          }
-        ]
-      }
-    }
-  }
-</script>
