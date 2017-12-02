@@ -12,7 +12,7 @@
       <td class="text-xs-right">{{ props.item.upc }}</td>
       <td class="text-xs-right">{{ props.item.price }}</td>
       <td class="text-xs-right">
-        <router-link :to="'/edit/' + props.item._id">
+        <router-link :to="'admin/edit/' + props.item._id">
           <v-icon>mode_edit</v-icon>
         </router-link>
       </td>
@@ -42,12 +42,12 @@
     },
     created () {
       if (this.products.length === 0) {
-        this.$store.dispatch('allProducts')
+        this.$store.dispatch('products')
       }
     },
     computed: {
       products () {
-        return this.$store.getters.allProducts
+        return this.$store.getters.products
       }
     }
   }

@@ -16,12 +16,14 @@
                 <v-text-field
                   label="Product Name"
                   v-model="product.name"
+                  :value="product.name"
                   :rules="nameRules"
                   required>
                 </v-text-field>
                 <v-text-field
                   label="Price"
                   v-model="product.price"
+                  :value="product.price"
                   :rules="priceRules"
                   prefix="$"
                   required>
@@ -29,6 +31,7 @@
                 <v-text-field
                   label="UPC Code"
                   v-model="product.upc"
+                  :value="product.upc"
                   :rules="upcRules"
                   required>
                 </v-text-field>
@@ -39,12 +42,14 @@
                 <v-text-field
                   label="Image"
                   v-model="product.image"
+                  :value="product.image"
                   :rules="imageRules"
                   required>
                 </v-text-field>
                 <v-text-field
                   label="Description"
                   v-model="product.description"
+                  :value="product.description"
                   :rules="descriptionRules"
                   multi-line
                   required>
@@ -56,7 +61,7 @@
         </v-card-text>
         <v-layout row class="text-xs-right">
           <v-flex xs12>
-            <v-btn class="success mb-2" @click="saveProduct">
+            <v-btn class="mb-2" @click="saveProduct">
               <span v-if="isEditing">Update Product</span>
               <span v-else>Add Product</span>
             </v-btn>
