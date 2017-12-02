@@ -24,7 +24,7 @@
       <v-flex xs12 class="text-xs-center">
         <v-card>
           <v-card-text>
-            <span class="display-1" style="font-style: italic;">
+            <span class="title" color="primary" style="font-style: italic;">
               No items in your cart.
             </span>
           </v-card-text>
