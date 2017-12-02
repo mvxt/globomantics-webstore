@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar app dark flat>
+  <v-toolbar app flat color="primary">
     <v-layout row>
       <v-flex xs8 offset-xs2>
         <v-toolbar-items>
