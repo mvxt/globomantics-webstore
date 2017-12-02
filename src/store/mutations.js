@@ -49,7 +49,6 @@ export const productMutations = {
     state.showLoader = false
     state.products = state.products.map(p => {
       if (p._id === payload._id) {
-        payload = {...payload, manufacturer: state.manufacturers.filter(x => x._id === payload.manufacturer)[0]}
         return payload
       }
       return p

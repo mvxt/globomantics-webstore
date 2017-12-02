@@ -15,14 +15,14 @@ import {
 } from './mutation-types'
 
 export const productActions = {
-  allProducts ({commit}) {
+  products ({commit}) {
     commit(ALL_PRODUCTS)
     // Fetch actual products from the API
     axios.get(`${API_BASE}/products`).then(response => {
       commit(ALL_PRODUCTS_SUCCESS, response.data)
     })
   },
-  productById ({commit}, payload) {
+  product ({commit}, payload) {
     commit(PRODUCT_BY_ID)
     // Fetch product by ID from API
     axios.get(`${API_BASE}/products/${payload}`).then(response => {
