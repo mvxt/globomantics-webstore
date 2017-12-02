@@ -1,11 +1,11 @@
 <template>
   <v-btn v-if="isAdding" @click="addToCart">
     <v-icon class="mr-1">add_shopping_cart</v-icon>
-    <span class="hidden-md-and-down mt-1">Add to Cart</span>
+    <span class="hidden-md-and-down mt-1" color="primary">Add to Cart</span>
   </v-btn>
   <v-btn v-else @click="removeFromCart">
     <v-icon class="mr-1">remove_shopping_cart</v-icon>
-    <span class="hidden-md-and-down mt-1">Remove from Cart</span>
+    <span class="hidden-md-and-down mt-1" color="primary">Remove from Cart</span>
   </v-btn>
 </template>
 
