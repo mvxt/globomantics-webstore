@@ -11,6 +11,8 @@
           </v-layout>
           <v-layout row>
             <h6>{{ product.name }}</h6>
+            <v-spacer></v-spacer>
+            <h6>$ {{ product.price }}</h6>
           </v-layout>
           <v-layout row>
             {{ product.description }}
