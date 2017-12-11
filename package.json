@@ -5,7 +5,8 @@
   "author": "Michael Vinh Xuan Thanh <meta.orphic@gmail.com>",
   "private": true,
   "scripts": {
-    "start": "node build/dev-server.js",
+    "start": "nodemon ./bin/www",
+    "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "build-report": "node build/build.js --report",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
@@ -66,6 +67,7 @@
     "karma-webpack": "^2.0.2",
     "mocha": "^3.2.0",
     "nightwatch": "^0.9.12",
+    "nodemon": "^1.12.5",
     "opn": "^5.1.0",
     "optimize-css-assets-webpack-plugin": "^2.0.0",
     "ora": "^1.2.0",
