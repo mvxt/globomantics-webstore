@@ -2,7 +2,7 @@
   <v-toolbar app flat color="primary" style="flex: 0 0 auto;">
     <v-layout row>
       <v-flex xs8 offset-xs2>
-        <v-toolbar-items>
+        <v-toolbar-items class="mt-2">
           <router-link to="/home">
             <span class="ml-0" style="height: 100%">
               <v-icon dark class="mb-2">home</v-icon>

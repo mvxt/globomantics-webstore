@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+var express = require('express')
+var https = require('https')
+var path = require('path')
+
+var api = require('../api/app')
+var app = express()
+
+// Set port to 80 for front-end stuff
+app.set('port', 8080)
+app.use(express.static(path.join(__dirname, '../dist')))
+
+// Set api server port to 3000
+api.set('port', 3000)
+
+// Listen for requests
+var vue_server = app.listen(app.get('port'), function() {
+  var vue_port = vue_server.address().port
+})
+
+var api_server = api.listen(api.get('port'), function() {
+  var api_port = api_server.address().port
+})

@@ -30,7 +30,6 @@ export const productActions = {
     })
   },
   addProduct ({commit}, payload) {
-    debugger
     commit(ADD_PRODUCT)
     // Create a new product via API
     axios.post(`${API_BASE}/products`, payload).then(response => {
