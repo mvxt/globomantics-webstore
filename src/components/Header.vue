@@ -3,7 +3,7 @@
     <v-layout row>
       <v-flex xs8 offset-xs2>
         <v-toolbar-items class="mt-2">
-          <router-link to="/home">
+          <router-link to="/">
             <span class="ml-0" style="height: 100%">
               <v-icon dark class="mb-2">home</v-icon>
               <span class="ml-1 title white--text">Home</span>

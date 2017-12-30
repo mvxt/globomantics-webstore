@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
+    "prod": "forever ./bin/www",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "build-report": "node build/build.js --report",
@@ -16,6 +17,7 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "forever": "^0.15.3",
     "vue": "^2.4.2",
     "vue-router": "^2.7.0",
     "vuetify": "^0.16.9",
