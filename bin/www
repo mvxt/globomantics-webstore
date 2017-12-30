@@ -7,7 +7,7 @@ var path = require('path')
 var api = require('../api/app')
 var app = express()
 
-// Set port to 80 for front-end stuff
+// Set port to 8080 for front-end
 app.set('port', 8080)
 app.use(express.static(path.join(__dirname, '../dist')))
 
