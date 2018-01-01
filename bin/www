@@ -1,24 +1,25 @@
 #!/usr/bin/env node
-
-var express = require('express')
-var https = require('https')
-var path = require('path')
-
-var api = require('../api/app')
-var app = express()
+var app = require('../api/app')
 
 // Set port to 8080 for front-end
-app.set('port', 8080)
-app.use(express.static(path.join(__dirname, '../dist')))
+var port = normalizePort(process.env.PORT || '3000')
+app.set('port', port)
 
-// Set api server port to 3000
-api.set('port', 3000)
+// Listen for requests for front-end
+app.listen(app.get('port'))
 
-// Listen for requests
-var vue_server = app.listen(app.get('port'), function() {
-  var vue_port = vue_server.address().port
-})
+function normalizePort (val) {
+  var port = parseInt(val, 10)
 
-var api_server = api.listen(api.get('port'), function() {
-  var api_port = api_server.address().port
-})
+  if (isNaN(port)) {
+    // named pipe
+    return val
+  }
+
+  if (port >= 0) {
+    // port number
+    return port
+  }
+
+  return false
+}

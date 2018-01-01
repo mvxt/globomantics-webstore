@@ -1,0 +1,6 @@
+CHANGELOG.md
+README.md
+Dockerfile
+LICENSE
+node_modules
+*.log

@@ -1,5 +1,7 @@
 import axios from 'axios'
-const API_BASE = 'http://localhost:3000/api/v1'
+var port = process.env.PORT || '8080'
+
+const API_BASE = 'http://localhost:' + port + '/api/v1'
 
 import {
   ADD_PRODUCT,
