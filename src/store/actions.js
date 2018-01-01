@@ -1,5 +1,5 @@
 import axios from 'axios'
-const port = process.env.PORT || 80
+const port = process.env.PORT
 const API_BASE = 'http://localhost:' + port + '/api/v1'
 
 import {
